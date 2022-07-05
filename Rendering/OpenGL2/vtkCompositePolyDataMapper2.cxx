@@ -1709,6 +1709,7 @@ void vtkCompositePolyDataMapper2::CopyMapperValuesToHelper(vtkCompositeMapperHel
   helper->SetGeometryShaderCode(this->GetGeometryShaderCode());
   helper->SetFragmentShaderCode(this->GetFragmentShaderCode());
   helper->SetStatic(1);
+  helper->SetVBOShiftScaleMethod(this->ShiftScaleMethod);
   helper->ClearAllShaderReplacements();
   for (auto& repl : this->UserShaderReplacements)
   {
